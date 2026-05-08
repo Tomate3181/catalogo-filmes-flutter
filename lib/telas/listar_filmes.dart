@@ -54,7 +54,9 @@ class _ListarFilmesState extends State<ListarFilmes> {
                   title: Text(filmes[index]),
                   onTap: () => Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => detalhes()),
+                    MaterialPageRoute(
+                      builder: (context) => detalhes(nomeFilme: filmes[index]),
+                    ),
                   ),
                   trailing: IconButton(
                     onPressed: () {
